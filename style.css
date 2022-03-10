@@ -3,6 +3,7 @@
 	padding: 0;
 	margin: 0;
     font-family: 'Poppins', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo img{
@@ -17,8 +18,8 @@ nav {
 	top: 0;
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 5%;
-	height: 100px;
-	background-color: #24262b;
+	height: 80px;
+	background-color: #ffffffb7;
 }
 nav .logo {
 	float: left;
@@ -47,21 +48,21 @@ nav .links a {
 	padding: 1em;
 	font-size: 16px;
 	font-weight: bold;
-	color: #fff;
+	color:rgb(4, 27, 70) ;
 	text-decoration: none;
 }
 #nav-toggle {
 	position: absolute;
 	top: -100px;
 }
-nav .icon-burger {
+nav .icon-cross {
 	display: none;
 	position: absolute;
 	right: 5%;
 	top: 50%;
 	transform: translateY(-50%);
 }
-nav .icon-burger .line {
+nav .icon-cross .line {
 	width: 30px;
 	height: 5px;
 	background-color: #fff;
@@ -74,7 +75,7 @@ nav .icon-burger .line {
 		float: none;
 		width: auto;
 		justify-content: center;
-        /* align-items: center; */
+        align-items: center;
 	}
 	nav .links {
 		float: none;
@@ -87,8 +88,8 @@ nav .icon-burger .line {
 		width: auto;
 		height: auto;
 		flex-direction: column;
-		justify-content: space-evenly;
-		background-color: rgba(0,0,0,.8);
+		justify-content: center;
+		background-color: rgba(255, 255, 255, 0.8);
 		overflow: hidden;
 		box-sizing: border-box;
 		transition: all .5s ease-in-out;
@@ -101,9 +102,9 @@ nav .icon-burger .line {
         top: 0;
         font-family: 'Montserrat', sans-serif;
         padding: 0 5%;
-        height: 100px;
-        width: 375px;
-        background-color: #24262b;
+        height: 60px;
+        width: 100%;
+        background-color: #302d2db9;
     }
 	nav .links a {
 		font-size: 20px;
@@ -111,16 +112,16 @@ nav .icon-burger .line {
 	nav :checked ~ .links {
 		bottom: 0;
 	}
-	nav .icon-burger {
+	nav .icon-cross {
 		display: block;
 	}
-	nav :checked ~ .icon-burger .line:nth-child(1) {
+	nav :checked ~ .icon-cross .line:nth-child(1) {
 		transform: translateY(10px) rotate(225deg);
 	}
-	nav :checked ~ .icon-burger .line:nth-child(3) {
+	nav :checked ~ .icon-cross .line:nth-child(3) {
 		transform: translateY(-10px) rotate(-225deg);
 	}
-	nav :checked ~ .icon-burger .line:nth-child(2) {
+	nav :checked ~ .icon-cross .line:nth-child(2) {
 		opacity: 0;
 	}
 	
@@ -139,49 +140,80 @@ nav .icon-burger .line {
     top: 0;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
+    margin-top: -650px;
+    flex-wrap: wrap;
 }
 #home::before{
     content: '';
-    background:url(image/jackie-hutchinson--FYKOM90DII-unsplash.jpg) no-repeat center center/cover ;
+    /* background:url(image/jackie-hutchinson--FYKOM90DII-unsplash.jpg) no-repeat center center/cover ; */
     /* background:linear-gradient(to right, #ff105f ,#ffad06); */
     position: absolute;
     height: 90%;
     top: 0;
     width: 100%;
     z-index: -1;
-    opacity: 0.8;
-}
+     opacity: 0.8;
+} 
 #home h1{
-    font-size: 100px;
-    color: #24262b;
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(4, 27, 70) ;
     text-align: center;
 }
 #home p{
-    color:#24262b ;
+    color:rgb(4, 27, 70) ;
     text-align: center;
     font-size: 1.3rem;
     line-height: 25px;
 }
+.box{
+    padding-top: 50px;
+    margin-top: 180px;
+    /* border: 2px solid  #fafeff7c; */
+    height: 350px;
+    border-radius: 30px;
+    background-color: #fafeffa9;
+}
+
+video{
+    object-fit: fill;
+    height: 600px;
+    width: 1550px;
+}
+
 
 @media only screen and (max-width: 768px){
+    video{
+        object-fit: fill;
+        height: 500px;
+        width: 100%;
+    }
     #home{
-        height: 370px; 
-        padding: 3px 28px;
+        height: 450px; 
+        padding: 3px 8px;
+    }
+    .box{
+        /* padding-top: 100px; */
+        margin-top: 250px;
+        /* border: 2px solid  #fafeff7c; */
+        height: 150px;
+        border-radius: 30px;
+        background-color: #fafeffa9;
     }
     #home h1{
-        margin-top: 200px;
-        font-size: 30px;
+        margin-top: -50px;
+        font-size: 20px;
         
     }
     
     #home::before{
-        height: 480px; 
+        height: 400px; 
     }
     
     #home p{
-        margin-top: 50px;
-        font-size: 13px;
+        margin-top: -5px;
+        font-size: 10px;
+        font-weight: bold;
     }
 
     #home .p{
@@ -325,7 +357,7 @@ nav .icon-burger .line {
 @media only screen and (max-width: 768px){
     .blog{
     
-    margin-top: -450px;
+    margin-top: -270px;
     }
 }
 .blog-contant{
@@ -404,7 +436,20 @@ nav .icon-burger .line {
         margin-top: -25px;
         padding: 1px;
        font-size: 10px;
-        width: 300px;
+        width: 250px;
+    }
+    .post-title a{
+
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 10px;
+        
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .post-heading{
+
     }
 }
 .post-info span{
@@ -417,7 +462,7 @@ nav .icon-burger .line {
 
     color: black;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 
     margin-top: 15px;
@@ -437,6 +482,61 @@ nav .icon-burger .line {
     margin: 10px;
     padding: 10px;
 
+}
+@media only screen and (max-width: 768px){
+
+    aside{
+        /* border: 2px solid red; */
+        width: 5px;
+        /* height: 50vh; */
+        display: flex;
+        /* align-items:flex-start; */
+        justify-content:flex-start;
+        flex-direction: column;
+        
+    }
+    .category h2{
+        font-size: large;
+        margin-left: 105px;
+        
+    }
+    .category-list{
+        margin: 25px;
+        /* width: 200px; */
+    }
+    .list-items{
+        /* background:linear-gradient( rgb(228, 147, 191),rgb(103, 189, 230)); */
+        background:linear-gradient(to right, #ff105f ,#ffad06);
+        border-radius: 30px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    .list-items a{
+        /* background:linear-gradient( rgb(214, 20, 127),rgb(103, 189, 230)); */
+        /* border-radius: 30px; */
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-decoration: none;
+        color: black;
+    
+    }
+    .list-items span{
+        /* background:linear-gradient( rgb(214, 20, 127),rgb(103, 189, 230)); */
+        /* border-radius: 30px; */
+        /* float: right; */
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    
+    }
 }
 
 aside{
@@ -487,7 +587,22 @@ aside{
     padding-right: 10px;
 
 }
+@media only screen and (max-width: 768px){
 
+    .post-cont{
+        /* border: 2px solid yellow; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        width: 300px;
+    
+    }
+
+
+}
 .popularpost{
     display: flex;
     align-items: center;
@@ -577,6 +692,33 @@ margin-bottom: 50px;
     padding: 10px;
 
 }
+@media only screen and (max-width: 768px){
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* width: 10px; */
+        
+    } 
+    .form-element{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* width: 10px; */
+    }
+    .form-element input,textarea{
+        margin-top:10px; 
+        margin-bottom:10px; 
+        padding: 10px;
+        width: 150px;
+    }
+    
+}
 
 .contact {
     display: flex;
@@ -599,6 +741,12 @@ margin-bottom: 50px;
     margin-bottom:10px; 
     padding: 10px;
 }
+.form-element textarea{
+    margin-top:10px; 
+    margin-bottom:10px; 
+    padding: 10px;
+    width: 350px;
+}
 .form-element input{
     margin-top:10px; 
     margin-bottom:10px; 
@@ -617,14 +765,25 @@ margin-bottom: 50px;
 @media only screen and (max-width: 768px){
     .form-element textarea{
 
-        width: 350px;
+        width: 280px;
+    }
+    .form-element input{
+
+        width: 280px;
     }
     
 }
 .newsletter h2{
 font-size: 50px;
 font-weight: bold;
+color: white;
 }
+.newsletter-video{
+    object-fit: fill;
+    height: 225px;
+    width: 100%;
+}
+
 .newsletter{
     display: flex;
     align-items: center;
@@ -634,6 +793,7 @@ font-weight: bold;
     margin-bottom:10px; 
     padding: 20px;
     background-color: chartreuse;
+    margin-top: -225px;
     height:  10%;
     flex-wrap: wrap;
 }
@@ -662,17 +822,42 @@ font-weight: bold;
 }
 @media only screen and (max-width: 768px){
     .form input,button{
-        margin-top:10px; 
-        margin-bottom:10px; 
+        margin-top:-30px; 
+        margin-bottom:50px; 
         padding: 10px;
+        width: 200px;
     }  
     .form button{
         width: 200px;
         border-radius: 10px
     } 
     .newsletter{
-        flex-basis: 90%;
+        flex-basis: 100%;
     } 
+    .newsletter-video{
+        object-fit: fill;
+        height: 250px;
+        width: 100%;
+    }
+    .newsletter h2{
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+        margin-top: -50px;
+        }
+    .newsletter{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* margin: 20px; */
+        margin-top:-250px; 
+        margin-bottom:-100px; 
+        /* padding: 20px; */
+        background-color: chartreuse;
+        margin-top: -225px;
+        height:  10%;
+        flex-wrap: wrap;
+    }
 }
 /* ........................................footer.....................................      */
 
@@ -769,32 +954,28 @@ ul{
 /*responsive*/
 @media only screen and (max-width: 768px){
   .footer-col{
-    width: 50%;
+    width: 30%;
     margin-bottom: 30px;
 }
 .row{
 	align-items: center;
     justify-content: center;
-    flex-basis: 50%;
+    flex-basis: 40%;
 }
 .footer-col{
     text-align: center;
 }
 .footer-col h4::before{
-    left: 150px;
+    left: 105px;
 }
 .footer{
 	background-color: #24262b;
-    padding: 70px 0;
+    /* padding: 50px 0; */
     /* margin: 1px; */
 }
 }
 @media only screen and (max-width: 768px){
   .footer-col{
-    width: 100%;
+    width: 90%;
 }
 }
-
-
-
-

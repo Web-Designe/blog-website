@@ -3,6 +3,7 @@
 	padding: 0;
 	margin: 0;
     font-family: 'Poppins', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo img{
@@ -17,8 +18,8 @@ nav {
 	top: 0;
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 5%;
-	height: 100px;
-	background-color: #24262b;
+	height: 80px;
+	background-color: #ffffffb7;
 }
 nav .logo {
 	float: left;
@@ -47,21 +48,21 @@ nav .links a {
 	padding: 1em;
 	font-size: 16px;
 	font-weight: bold;
-	color: #fff;
+	color:rgb(4, 27, 70) ;
 	text-decoration: none;
 }
 #nav-toggle {
 	position: absolute;
 	top: -100px;
 }
-nav .icon-burger {
+nav .icon-cross {
 	display: none;
 	position: absolute;
 	right: 5%;
 	top: 50%;
 	transform: translateY(-50%);
 }
-nav .icon-burger .line {
+nav .icon-cross .line {
 	width: 30px;
 	height: 5px;
 	background-color: #fff;
@@ -74,7 +75,7 @@ nav .icon-burger .line {
 		float: none;
 		width: auto;
 		justify-content: center;
-        /* align-items: center; */
+        align-items: center;
 	}
 	nav .links {
 		float: none;
@@ -87,8 +88,8 @@ nav .icon-burger .line {
 		width: auto;
 		height: auto;
 		flex-direction: column;
-		justify-content: space-evenly;
-		background-color: rgba(0,0,0,.8);
+		justify-content: center;
+		background-color: rgba(255, 255, 255, 0.8);
 		overflow: hidden;
 		box-sizing: border-box;
 		transition: all .5s ease-in-out;
@@ -101,9 +102,9 @@ nav .icon-burger .line {
         top: 0;
         font-family: 'Montserrat', sans-serif;
         padding: 0 5%;
-        height: 100px;
-        width: 375px;
-        background-color: #24262b;
+        height: 60px;
+        width: 100%;
+        background-color: #302d2db9;
     }
 	nav .links a {
 		font-size: 20px;
@@ -111,16 +112,16 @@ nav .icon-burger .line {
 	nav :checked ~ .links {
 		bottom: 0;
 	}
-	nav .icon-burger {
+	nav .icon-cross {
 		display: block;
 	}
-	nav :checked ~ .icon-burger .line:nth-child(1) {
+	nav :checked ~ .icon-cross .line:nth-child(1) {
 		transform: translateY(10px) rotate(225deg);
 	}
-	nav :checked ~ .icon-burger .line:nth-child(3) {
+	nav :checked ~ .icon-cross .line:nth-child(3) {
 		transform: translateY(-10px) rotate(-225deg);
 	}
-	nav :checked ~ .icon-burger .line:nth-child(2) {
+	nav :checked ~ .icon-cross .line:nth-child(2) {
 		opacity: 0;
 	}
 	
@@ -139,49 +140,80 @@ nav .icon-burger .line {
     top: 0;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
+    margin-top: -650px;
+    flex-wrap: wrap;
 }
 #home::before{
     content: '';
-    background:url(image/jackie-hutchinson--FYKOM90DII-unsplash.jpg) no-repeat center center/cover ;
+    /* background:url(image/jackie-hutchinson--FYKOM90DII-unsplash.jpg) no-repeat center center/cover ; */
     /* background:linear-gradient(to right, #ff105f ,#ffad06); */
     position: absolute;
     height: 90%;
     top: 0;
     width: 100%;
     z-index: -1;
-    opacity: 0.8;
-}
+     opacity: 0.8;
+} 
 #home h1{
-    font-size: 100px;
-    color: #24262b;
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(4, 27, 70) ;
     text-align: center;
 }
 #home p{
-    color:#24262b ;
+    color:rgb(4, 27, 70) ;
     text-align: center;
     font-size: 1.3rem;
     line-height: 25px;
 }
+.box{
+    padding-top: 50px;
+    margin-top: 180px;
+    /* border: 2px solid  #fafeff7c; */
+    height: 350px;
+    border-radius: 30px;
+    background-color: #fafeffa9;
+}
+
+video{
+    object-fit: fill;
+    height: 600px;
+    width: 1550px;
+}
+
 
 @media only screen and (max-width: 768px){
+    video{
+        object-fit: fill;
+        height: 500px;
+        width: 100%;
+    }
     #home{
-        height: 370px; 
-        padding: 3px 28px;
+        height: 450px; 
+        padding: 3px 8px;
+    }
+    .box{
+        /* padding-top: 100px; */
+        margin-top: 250px;
+        /* border: 2px solid  #fafeff7c; */
+        height: 150px;
+        border-radius: 30px;
+        background-color: #fafeffa9;
     }
     #home h1{
-        margin-top: 200px;
-        font-size: 30px;
+        margin-top: -50px;
+        font-size: 20px;
         
     }
     
     #home::before{
-        height: 480px; 
+        height: 400px; 
     }
     
     #home p{
-        margin-top: 50px;
-        font-size: 13px;
+        margin-top: -5px;
+        font-size: 10px;
+        font-weight: bold;
     }
 
     #home .p{
@@ -622,224 +654,3 @@ margin-bottom: 50px;
     padding: 10px;
 
 }
-
-.contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-}
-
-.form-element{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.form-element input,textarea{
-    margin-top:10px; 
-    margin-bottom:10px; 
-    padding: 10px;
-}
-.form-element input{
-    margin-top:10px; 
-    margin-bottom:10px; 
-    padding: 10px;
-    width: 350px;
-}
-.form-element button{
-    margin-top:10px; 
-    margin-bottom:10px; 
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-    cursor: pointer;
-    background:linear-gradient(to right, #ff105f ,#ffad06);
-}
-@media only screen and (max-width: 768px){
-    .form-element textarea{
-
-        width: 350px;
-    }
-    
-}
-.newsletter h2{
-font-size: 50px;
-font-weight: bold;
-}
-.newsletter{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* margin: 20px; */
-    margin-top:50px; 
-    margin-bottom:10px; 
-    padding: 20px;
-    background-color: chartreuse;
-    height:  10%;
-    flex-wrap: wrap;
-}
-.form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    padding: 50px;
-    flex-wrap: wrap;
-
-}
-.form input,textarea,button{
-    margin-left:10px; 
-    margin-right:10px; 
-    padding: 10px;
-    
-
-}
-.form button{
-    margin-left:10px; 
-    margin-right:10px; 
-    padding: 10px;
-    background:linear-gradient(to right, #ff105f ,#ffad06);
-
-}
-@media only screen and (max-width: 768px){
-    .form input,button{
-        margin-top:10px; 
-        margin-bottom:10px; 
-        padding: 10px;
-    }  
-    .form button{
-        width: 200px;
-        border-radius: 10px
-    } 
-    .newsletter{
-        flex-basis: 90%;
-    } 
-}
-/* ........................................footer.....................................      */
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body{
-	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
-}
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
-.container{
-	max-width: 1170px;
-	margin:auto;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-    flex-basis: 50%;
-}
-ul{
-	list-style: none;
-}
-.footer{
-	background-color: #24262b;
-    padding: 70px 0;
-}
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
-.bottom-logo{
-    display: flex;
-    flex-direction: column;
-    color: rgb(163, 157, 157);
-}
-
-/*responsive*/
-@media only screen and (max-width: 768px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-.row{
-	align-items: center;
-    justify-content: center;
-    flex-basis: 50%;
-}
-.footer-col{
-    text-align: center;
-}
-.footer-col h4::before{
-    left: 150px;
-}
-.footer{
-	background-color: #24262b;
-    padding: 70px 0;
-    /* margin: 1px; */
-}
-}
-@media only screen and (max-width: 768px){
-  .footer-col{
-    width: 100%;
-}
-}
-
-
-
-
